@@ -1,0 +1,90 @@
+//MyPoint.java
+
+public class MyPoint {
+	double x=0;
+	double y=0;
+	public  MyPoint(){
+		
+	}
+	
+	public MyPoint(double x,double y) {
+		this.x=x;
+		this.y = y;
+	}
+	
+	public double getX() {
+		return x;
+	}
+	public void setX(double x) {
+		this.x = x;
+	}
+	public double getY() {
+		return y;
+	}
+	public void setY(double y) {
+		this.y = y;
+	}
+	public double distance(MyPoint I,MyPoint B){
+		return Math.sqrt((I.x-B.x)*(I.x-B.x)+(I.y-B.y)*(I.y-B.y));
+	}
+}
+
+
+
+
+
+
+//MyPointMain.java
+
+import java.util.Scanner;
+public class MyPointMain {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自动生成方法存根
+
+		MyPoint first=new MyPoint();
+		System.out.println("显示第一个坐标");
+		System.out.println("("+first.x+","+first.y+")");
+		System.out.println("请输入第二个坐标");
+		Scanner input=new Scanner(System.in);
+		double i=input.nextDouble();
+		double j=input.nextDouble();
+		MyPoint second=new MyPoint(i,j);
+		System.out.println("("+second.x+","+second.y+")");
+		MyPoint pointdis=new MyPoint();
+		double pointdistance=pointdis.distance(first,second);
+		System.out.println("距离为");
+		System.out.println(pointdistance);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
